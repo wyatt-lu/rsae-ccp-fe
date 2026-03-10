@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { Button } from '@/common/components/atoms/Button';
 
 // Note: Ensure this path is correct for your specific template! 
 // If your hook is named differently, adjust this import.
@@ -219,26 +220,9 @@ export default function Login() {
           <CheckboxLabel htmlFor="trustDevice">Trust this device for 30 days</CheckboxLabel>
         </CheckboxRow>
 
-        <button 
-          type="submit" 
-          disabled={isLoading}
-          style={{ 
-            backgroundColor: isLoading ? '#e6d398' : '#E2B853', 
-            color: 'black', 
-            padding: '1.2rem', 
-            fontSize: '1.2rem', 
-            fontWeight: 'bold',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '10px',
-            cursor: isLoading ? 'not-allowed' : 'pointer',
-            border: 'none',
-            borderRadius: '15px'
-          }}
-        >
+        <Button.Primary type="submit" disabled={isLoading} style={{ width: '100%', padding: '1.2rem' }}>
           <span>🔒</span> {isLoading ? 'Logging In...' : 'Secure Login'}
-        </button>
+        </Button.Primary>
 
       </LoginCard>
     </PageWrapper>

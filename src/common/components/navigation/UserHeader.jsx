@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import rsaeLogo from '@/assets/rsae-logo.jpg'; 
+import { Button } from '@/common/components/atoms/Button';
 
 // --- STYLED COMPONENTS ---
 
@@ -57,9 +58,9 @@ export default function UserHeader() {
         <StyledLink to="/login">Admin Log In</StyledLink>
         
         <Link to="/submit" style={{ textDecoration: 'none' }}>
-          <button style={{ backgroundColor: '#E2B853', color: 'black' }}>
+          <Button.Secondary style={{ padding: '8px 16px', fontSize: '0.95rem', borderWidth: '1px' }}>
             Submit Proposal
-          </button>
+          </Button.Secondary>
         </Link>
       </NavLinks>
 

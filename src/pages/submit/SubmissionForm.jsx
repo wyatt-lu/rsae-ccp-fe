@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Button } from '@/common/components/atoms/Button';
 
 // --- STYLED COMPONENTS ---
 
@@ -232,10 +233,8 @@ export default function SubmissionForm() {
         </PrivacyNotice>
 
         {/* SUBMIT BUTTON */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <button style={{ backgroundColor: '#E2B853', color: 'black', padding: '1rem 3rem', fontSize: '1.2rem' }}>
-            Submit Proposal
-          </button>
+        <div style={{ display: 'flex', justifyContent: 'center'}}>
+          <Button.Primary type="submit">Submit Proposal</Button.Primary>
         </div>
 
       </FormContainer>
